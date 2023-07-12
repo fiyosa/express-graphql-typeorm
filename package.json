@@ -1,0 +1,51 @@
+{
+  "name": "graphql-v1",
+  "version": "1.0.0",
+  "description": "initial project",
+  "main": "main.js",
+  "keywords": [
+    "graphql",
+    "apollo",
+    "express",
+    "typeorm"
+  ],
+  "author": "fiyosa",
+  "license": "ISC",
+  "engines": {
+    "node": "16.20.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/main.ts",
+    "build": "tsc -b .",
+    "start": "node ./build/index.js",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migrate": "yarn typeorm migration:generate ./src/database/migrations/migrate -d ./src/config/db.ts",
+    "migrate:show": "yarn typeorm migration:show -d ./src/config/db.ts",
+    "migrate:run": "yarn typeorm migration:run -d ./src/config/db.ts",
+    "migrate:revert": "yarn typeorm migration:revert -d ./src/config/db.ts",
+    "migrate:seed": "ts-node ./src/database/seeders/seeder.ts",
+    "migrate:fresh": "yarn migrate && yarn migrate:revert && yarn migrate:run"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.7.5",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.4.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "graphql": "^16.7.1",
+    "graphql-tag": "^2.12.6",
+    "hashids": "^2.3.0",
+    "jsonwebtoken": "^9.0.1",
+    "moment": "^2.29.4",
+    "nodemon": "^2.0.22",
+    "pg": "^8.11.1",
+    "ts-node": "^10.9.1",
+    "typeorm": "^0.3.17",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.guides.indentation": true,
+  "editor.tabSize": 2,
+  "prettier.semi": false,
+  "prettier.useTabs": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 120,
+  "prettier.requireConfig": false,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true, // handler warning typeorm
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "*.lock": true,
+    "*lock.json": true,
+    "**/build": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
